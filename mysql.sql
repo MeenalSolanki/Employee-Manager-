@@ -1,10 +1,10 @@
 -- -----------------------------------------------------
--- Schema full-stack-ecommerce
+-- Schema manager-employee-mindbowser
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `manager-employee-mindbrowser`;
+DROP SCHEMA IF EXISTS `manager-employee-mindbowser`;
 
-CREATE SCHEMA `manager-employee-mindbrowser`;
-USE `manager-employee-mindbrowser` ;
+CREATE SCHEMA `manager-employee-mindbowser`;
+USE `manager-employee-mindbowser` ;
 
 -- -----------------------------------------------------
 -- Employee table
