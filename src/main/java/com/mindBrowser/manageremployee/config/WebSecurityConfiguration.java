@@ -7,6 +7,8 @@ import java.util.Set;
 import javax.persistence.EntityManager;
 import javax.persistence.metamodel.EntityType;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,13 +37,16 @@ import com.mindBrowser.manageremployee.service.UserDetailsServiceImpl;
 		prePostEnabled = true)
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter implements RepositoryRestConfigurer
 {
+	private static final Logger logger = LoggerFactory.getLogger(WebSecurityConfiguration.class);
+	
+	
 	@Autowired
 	UserDetailsServiceImpl userDetailsService;
 
 	@Autowired
 	private AuthEntryPointJwt unauthorizedHandler;
 
-		private EntityManager entityManager;
+	private EntityManager entityManager;
 	
 	
 	WebSecurityConfiguration(EntityManager entityManager)
@@ -93,7 +98,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter imple
 	private void exposeIds(RepositoryRestConfiguration config) {
 	
 			Set<EntityType<?>> entities = entityManager.getMetamodel().getEntities();
-			System.out.println(" entityManager.getMetamodel(): "+entityManager.getMetamodel().getEntities());
+			logger.info(" entityManager.getMetamodel(): "+entityManager.getMetamodel().getEntities());
 			
 			List<Class> entityClasses = new ArrayList<>();
 			

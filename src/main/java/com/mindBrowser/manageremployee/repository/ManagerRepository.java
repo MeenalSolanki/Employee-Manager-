@@ -11,7 +11,5 @@ import com.mindBrowser.manageremployee.entity.Manager;
 public interface ManagerRepository extends JpaRepository<Manager, Long> {
 	Optional<Manager> findByEmail(String email);
 
-	//Boolean existsByUsername(String username);
-
 	Boolean existsByEmail(String email);
 }

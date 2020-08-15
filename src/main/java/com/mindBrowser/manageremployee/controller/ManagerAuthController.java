@@ -62,8 +62,22 @@ public class ManagerAuthController {
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		String jwt = jwtUtils.generateJwtToken(authentication);
 		
-		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();		
-		Optional<Manager> manager = managerRepository.findById( userDetails.getId());
+		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();	
+		
+		Optional<Manager> manager ;
+		
+		if(managerRepository.existsById(userDetails.getId()))
+		{
+		 manager = managerRepository.findById( userDetails.getId());
+		}
+		else
+		{	
+			return ResponseEntity
+					.badRequest()
+					.body(new MessageResponse("Manager Account Not Exist!"));
+		}
+
+			
 		
 		StoreCurrentManager.setManager(manager.get());
 		

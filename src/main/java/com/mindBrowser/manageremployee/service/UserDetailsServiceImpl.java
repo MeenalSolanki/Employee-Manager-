@@ -1,7 +1,5 @@
 package com.mindBrowser.manageremployee.service;
 
-import java.util.function.Supplier;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.mindBrowser.manageremployee.entity.Manager;
 import com.mindBrowser.manageremployee.repository.ManagerRepository;
+
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -26,14 +25,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		
 		try {
 			manager = managerRepository.findByEmail(email)
-					.orElseThrow(new Supplier<Throwable>() {
-						@Override
-						public Throwable get() {
-							return new UsernameNotFoundException("Account Not Found with email: " );
-						}
-					});
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
+					.orElseThrow((() -> new UsernameNotFoundException("Manger Found with this Email: " + email)));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
