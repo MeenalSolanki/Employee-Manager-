@@ -12,5 +12,4 @@ public class StoreCurrentManager {
 	public static void setManager(Manager manager1) {
 		manager = manager1;
 	}	
-
 }
