@@ -6,6 +6,6 @@ for database setup
 2. All table will automatically get created when you run your project by spring jpa repository (spring.jpa.hibernate.ddl-auto= update).
 3. Just change in src/main/resource/application.properties give your mysql username and password
 
-About project.
-1. Manager can add update delete his employees 
-2. he can view only his employees data.
+About Manager role.
+1. Manager can add, update, delete his employees 
+2. He can view only his employees data.
