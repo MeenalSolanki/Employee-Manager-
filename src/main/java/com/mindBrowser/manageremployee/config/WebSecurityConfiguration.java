@@ -109,7 +109,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter imple
 			
 			Class[] domainTypes =entityClasses.toArray(new Class[0]);
 			
-			System.out.println(" domainTypes: "+domainTypes);
+			logger.info(" domainTypes: "+domainTypes);
 			config.exposeIdsFor(domainTypes);
 		
 	}
