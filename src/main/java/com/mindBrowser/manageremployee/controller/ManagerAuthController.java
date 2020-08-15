@@ -72,10 +72,7 @@ public class ManagerAuthController {
 					.body(new MessageResponse("Manager Account Not Exist!"));
 		}
 
-			
-		
-		StoreCurrentManager.setManager(manager.get());
-		
+		StoreCurrentManager.setManager(manager.get());	
 			
 		return ResponseEntity.ok(new JwtResponse(jwt, 
 												 manager.get().getId(),
@@ -92,12 +89,12 @@ public class ManagerAuthController {
 
 	@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+		
 		if (managerRepository.existsByEmail(signUpRequest.getEmail())) {
 			return ResponseEntity
 					.badRequest()
 					.body(new MessageResponse("Email is already in use!"));
 		}
-
 		
 		// Create new user's account
 		Manager manager = new Manager(signUpRequest.getEmail(),
