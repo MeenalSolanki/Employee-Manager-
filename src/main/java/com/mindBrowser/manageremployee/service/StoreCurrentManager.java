@@ -6,8 +6,7 @@ public class StoreCurrentManager {
 
 	static Manager manager;
 	
-	private StoreCurrentManager(Manager manager1)
-	{
+	private StoreCurrentManager(Manager manager1){
 		manager = manager1;
 	}
 	

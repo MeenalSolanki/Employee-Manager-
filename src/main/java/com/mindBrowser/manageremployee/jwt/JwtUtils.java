@@ -19,6 +19,7 @@ import io.jsonwebtoken.UnsupportedJwtException;
 
 @Component
 public class JwtUtils {
+	
 	private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
 	@Value("${mindBowserSecretKey.app.jwtSecret}")
@@ -59,7 +60,7 @@ public class JwtUtils {
 		} catch (IllegalArgumentException e) {
 			logger.error("JWT claims string is empty: {}", e.getMessage());
 		}
-
+		
 		return false;
 	}
 }

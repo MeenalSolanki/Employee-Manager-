@@ -29,7 +29,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return UserDetailsImpl.build(manager);
 	}
 }

@@ -12,7 +12,7 @@ import com.mindBrowser.manageremployee.entity.Employee;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RepositoryRestResource
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+	
 	//to give only the manager added employees data
 	Page<Employee> findByManagerId(@Param("id") Long id, Pageable pageable);
-	
 }

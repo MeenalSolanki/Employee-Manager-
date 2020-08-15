@@ -37,61 +37,41 @@ public class JwtResponse {
 		return firstname;
 	}
 
-
-
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
-
-
 
 	public String getLastname() {
 		return lastname;
 	}
 
-
-
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-
-
 
 	public String getAddress() {
 		return address;
 	}
 
-
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-
 
 	public Date getDob() {
 		return dob;
 	}
 
-
-
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
-
-
 
 	public String getCompany() {
 		return company;
 	}
 
-
-
 	public void setCompany(String company) {
 		this.company = company;
 	}
-
-
 
 	public String getAccessToken() {
 		return token;
@@ -124,8 +104,6 @@ public class JwtResponse {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-
 
 	
 }

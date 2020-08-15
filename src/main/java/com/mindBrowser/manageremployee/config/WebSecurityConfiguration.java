@@ -105,7 +105,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter imple
 			for(EntityType tempEntityType : entities)
 			{
 				entityClasses.add(tempEntityType.getJavaType());
-				System.out.println(" entity: "+tempEntityType.getJavaType());
+				logger.info(" entity: "+tempEntityType.getJavaType());
 			}
 			
 			Class[] domainTypes =entityClasses.toArray(new Class[0]);

@@ -18,12 +18,10 @@ import com.mindBrowser.manageremployee.repository.EmployeeRepository;
 import com.mindBrowser.manageremployee.service.StoreCurrentManager;
 
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*",maxAge = 3600)
 @RestController
 @RequestMapping("/mindbowser")
 public class EmployeeController {
-	
-	
 	
 	@Autowired
 	EmployeeRepository employeeRepository;

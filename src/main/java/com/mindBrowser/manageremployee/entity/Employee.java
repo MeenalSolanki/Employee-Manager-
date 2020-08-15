@@ -25,7 +25,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Employee {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="empid")
@@ -64,7 +64,6 @@ public class Employee {
 	@Size(max = 40)
 	private String city;
 
-	
 	@ManyToOne
 	@JoinColumn(name = "manager_id" ,nullable=false)
 	@JsonIgnore

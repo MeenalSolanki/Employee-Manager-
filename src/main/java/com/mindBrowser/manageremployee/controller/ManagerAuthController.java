@@ -64,7 +64,7 @@ public class ManagerAuthController {
 		
 		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();	
 		
-		Optional<Manager> manager ;
+		Optional<Manager> manager;
 		
 		if(managerRepository.existsById(userDetails.getId()))
 		{
