@@ -43,7 +43,8 @@ public class JwtUtils {
 	public String getEmailFromJwtToken(String token) {
 		return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody().getSubject();
 	}
-
+		
+	
 	//check if client is authorized with secret key
 	public boolean validateJwtToken(String authToken) {
 		try {

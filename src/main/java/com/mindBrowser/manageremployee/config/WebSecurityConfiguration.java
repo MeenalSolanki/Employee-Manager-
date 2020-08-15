@@ -30,7 +30,6 @@ import com.mindBrowser.manageremployee.jwt.AuthTokenFilter;
 import com.mindBrowser.manageremployee.service.UserDetailsServiceImpl;
 
 
-
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(

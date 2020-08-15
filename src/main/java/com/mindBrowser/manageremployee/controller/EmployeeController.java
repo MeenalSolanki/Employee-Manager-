@@ -17,7 +17,6 @@ import com.mindBrowser.manageremployee.entity.Employee;
 import com.mindBrowser.manageremployee.repository.EmployeeRepository;
 import com.mindBrowser.manageremployee.service.StoreCurrentManager;
 
-
 @CrossOrigin(origins = "*",maxAge = 3600)
 @RestController
 @RequestMapping("/mindbowser")

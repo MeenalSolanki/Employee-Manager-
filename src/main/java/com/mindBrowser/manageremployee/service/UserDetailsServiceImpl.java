@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.mindBrowser.manageremployee.entity.Manager;
 import com.mindBrowser.manageremployee.repository.ManagerRepository;
 
-
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 	

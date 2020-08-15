@@ -16,8 +16,6 @@ public class JwtResponse {
 	private String company;
 
 	
-	
-
 	public JwtResponse(String accessToken, Long id, String email, String firstname, String lastname,
 			String address, Date dob, String company) {
 

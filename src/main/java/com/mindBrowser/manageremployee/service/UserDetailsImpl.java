@@ -42,7 +42,6 @@ public class UserDetailsImpl implements UserDetails {
 				manager.getPassword());
 	}
 	
-
 	public Long getId() {
 		return id;
 	}

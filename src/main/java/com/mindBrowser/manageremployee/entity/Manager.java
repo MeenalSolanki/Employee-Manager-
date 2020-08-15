@@ -80,6 +80,5 @@ public class Manager {
 		this.company = company;
 	}
 	
-	
 
 }
